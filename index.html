@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en"  data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenCampaign • Plant a Tree</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- DaisyUI -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body class="bg-[#F0FDF4]">
+    <nav class="bg-[#15803D] z-20">
+        <div class="navbar shadow-sm">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> 
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /> 
+                        </svg>
+                    </div>
+                    <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="#">Plant a Tree</a></li>
+                    </ul>
+                </div>
+                <a class="text-lg font-bold text-white">Green Earth</a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-1">
+                    <li><a href="" class="text-white">About</a></li>
+                    <li><a href="" class="text-white">Gallery</a></li>
+                    <li><a href="" class="text-white">Plant a Tree</a></li>
+                </ul>
+            </div>
+            <div class="navbar-end">
+                <a class="btn bg-[#FACC15] text-[#15803D] hover:bg-[#f9d751] rounded-full shadow border-none">Plant a Tree</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- banner -->
+    <section class="bg-[#CFF0DC] py-10">
+        <div class="grid grid-cols-1 md:grid-cols-3 items-center justify-center gap-8">
+
+            <!-- Left Image -->
+            <div class="md:flex justify-center hidden">
+                <img src="./assets/hero-leaf1.png" alt="Tree" class="w-full max-w-sm">
+            </div>
+
+            <!-- Center Content -->
+            <div class="text-center md:text-center z-20">
+                <h1 class="text-3xl md:text-3xl font-bold text-green-800 mb-4">
+                    Plant a Tree,Grow a Future
+                </h1>
+                <p class="text-gray-600 mb-6 text-sm md:text-base">
+                    Join our mission to plant 1 million trees and make the Earth greener for future generations.
+                </p>
+                <a href="#"
+                   class="btn bg-[#FACC15] text-[#15803D] rounded-full shadow px-6 text-[#15803D]">
+                    Get Involved
+                </a>
+            </div>
+
+            <!-- Right Image -->
+            <div class="flex justify-center items-center absolute md:static z-10 opacity-40 md:opacity-100">
+                <img src="./assets/hero-leaf2.png" alt="Nature" class="w-full max-w-sm">
+            </div>
+
+        </div>
+    </section>
+
+    <!-- hero -->
+    <section class="py-10 bg-green-50">
+    <span class="text-3xl font-bold flex justify-center mb-8 text-green-900 p-7">Choose Your Trees</span>
+  <div class="container mx-auto px-6 flex gap-6">
+
+    <!-- Left Part: Categories -->
+    <div class="bg-red-500 text-white rounded-2xl p-6 w-1/6">
+      <h2 class="font-bold text-lg mb-4">Categories</h2>
+      <ul class="list-disc pl-4 space-y-1">
+        <li>All Trees</li>
+        <li>Fruit Trees</li>
+        <li>Flowering Trees</li>
+        <li>Shade Trees</li>
+        <li>Timber Trees</li>
+        <li>Evergreen Trees</li>
+        <li>Ornamental Plants</li>
+        <li>Bamboo</li>
+        <li>Aquatic Plants</li>
+      </ul>
+    </div>
+
+    <!-- Center Part: Cards (Weight More) -->
+    <div id="card-container" class=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+    <!-- Card 1 -->
+    <div  class="bg-white h-[400px] rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 flex flex-col">
+      <div class="h-48 w-full overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1523978591478-c753949ff840?w=600" alt="Plant 1" class="w-full h-full  p-3 flex justify-center items-center ">
+      </div>
+      <div class="p-4 flex flex-col flex-1 gap-2">
+        <h2 class="text-green-800 font-bold text-lg">Plant a Tree Kit</h2>
+        <p class="text-gray-600 text-sm">Everything you need to grow your own tree at home. Easy, fun, and eco-friendly!</p>
+        <div class="flex items-center justify-between mt-2">
+          <a href="#" class="bg-green-600 text-white px-3 py-1 rounded-lg shadow hover:bg-green-700 transition-all duration-300 text-sm">Buy Now</a>
+          <span class="text-green-700 font-semibold">$19.99</span>
+          
+        </div>
+        <button class="mt-3 w-full bg-yellow-500 text-black font-semibold px-6 py-2 rounded-full shadow hover:bg-yellow-600 transition-all duration-300">Add to Cart</button>
+      </div>
+    </div>
+
+    
+
+  </div>
+
+
+    <!-- Right Part: Your Cart -->
+    <div class="bg-blue-500 text-white rounded-2xl p-6 w-1/6 flex flex-col justify-between">
+      <h2 class="font-bold text-lg mb-4">Your Cart</h2>
+      <div class="flex flex-col gap-2">
+        <div class="flex justify-between">
+          <span>Plant a Tree Kit</span>
+          <span>$19.99</span>
+        </div>
+        <div class="flex justify-between">
+          <span>Forest Seed Pack</span>
+          <span>$29.99</span>
+        </div>
+        <div class="flex justify-between">
+          <span>Eco Planter Box</span>
+          <span>$24.99</span>
+        </div>
+      </div>
+      <div class="mt-4 font-bold text-xl flex justify-between border-t border-white pt-2">
+        <span>Total</span>
+        <span>$74.97</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Campaign Section -->
+ <section class="max-w-5xl mx-auto p-6 ">
+    
+    <!-- Title -->
+    <h2 class="text-3xl font-bold text-center mb-8 text-green-900">About the Campaign</h2>
+    
+    <!-- Content -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-centerbg-[#F0FDF4]   p-6">
+      
+      <!-- Image Part -->
+      <div>
+        <img src="./assets/about.png" alt="Example Image" class="rounded-xl shadow-md">
+      </div>
+      
+      <!-- Text Part -->
+      <div class="flex justify-center items-center">
+        <div>
+      <p class="mt-3 text-gray-700">Green Earth is a global tree plantation initiative dedicated to fighting climate change. Since our start, we’ve planted over 500,000 trees worldwide. By joining our campaign, you help restore forests, create habitats for wildlife, and combat global warming.</p>
+      <ul class="mt-4 space-y-2 text-gray-700 list-disc list-inside">
+        <li>Restoration of natural habitats</li>
+        <li>Improvement of air quality</li>
+        <li>Support for local communities</li>
+      </ul>
+    </div>
+      </div>
+    </div>
+</section>
+<!--  IMPACT -->
+  <section id="impact" class="bg-[#CFF0DC] py-10">
+    <span class="text-3xl font-bold flex justify-center mb-8 text-green-900">Our Impact</span>
+    <div class="max-w-6xl mx-auto px-4 md:px-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-white rounded-2xl shadow p-6 text-center">
+        <div class="text-3xl font-extrabold text-green-900">500K+</div>
+        <div class="mt-2 text-gray-600">Trees Planted</div>
+      </div>
+      <div class="bg-white rounded-2xl shadow p-6 text-center">
+        <div class="text-3xl font-extrabold text-green-900">120+</div>
+        <div class="mt-2 text-gray-600">Communities Involved</div>
+      </div>
+      <div class="bg-white rounded-2xl shadow p-6 text-center">
+        <div class="text-3xl font-extrabold text-green-900">30+</div>
+        <div class="mt-2 text-gray-600">Countries Reached</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- form -->
+
+
+  <section class="bg-[#166534] py-16">
+    <div class="max-w-2xl mx-auto px-6">
+
+      <!-- Title -->
+      <h2 class="text-3xl font-bold text-white text-center mb-8">
+        Plant a Tree Today
+      </h2>
+
+      <!-- Form Box -->
+      <div class="bg-[#15803D] shadow-lg rounded-2xl p-8">
+        <form class="space-y-5">
+          
+          <!-- Name -->
+          <div>
+            
+            <input type="text" placeholder="Enter your name" 
+              class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FACC15]">
+          </div>
+
+          <!-- Email -->
+          <div>
+            
+            <input type="email" placeholder="Enter your email" 
+              class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FACC15]">
+          </div>
+
+          <!-- Number of Trees -->
+          <div>
+            
+            <input type="number" placeholder="Enter number of trees" 
+              class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FACC15]">
+          </div>
+
+          <!-- Button -->
+          <button type="submit" 
+            class="w-full bg-[#FACC15] text-[#15803D] font-semibold py-3 rounded-full shadow-md hover:bg-[#b79612]  hover:text-[#1f9c4d]  transition">
+            Donate Now
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+<footer class="bg-[#14532D] py-6 ">
+  <div>
+    <p class="text-center text-white text-sm font-medium">
+      © 2025 Green Earth. All Rights Reserved.
+    </p>
+  </div>
+</footer>
+
+
+
+<script src="script.js"></script>
+</body>
+</html>
+
