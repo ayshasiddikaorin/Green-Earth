@@ -40,7 +40,7 @@ async function fetchData(id = "") {
       
       <div class="flex items-center justify-between mt-2">
         <a href="#" 
-           class="bg-green-300 text-white px-3 py-1 rounded-lg shadow hover:bg-green-700 transition text-sm">
+           class="bg-[#DCFCE7] text-[#1D7F3F] px-3 py-1 rounded-lg shadow hover:bg-green-700 transition text-sm">
           ${item.category}
         </a>
          <span class="text-green-700 font-semibold">$${item.price}</span>

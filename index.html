@@ -30,21 +30,21 @@
           </div>
           <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
             <li><a href="#about">About</a></li>
-            <li><a href="#">Gallery</a></li>
-            <li><a href="#">Plant a Tree</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#plant">Plant a Tree</a></li>
           </ul>
         </div>
         <a class="text-lg font-bold text-white">Green Earth</a>
       </div>
       <div class="navbar-center hidden lg:flex">
         <ul class="menu menu-horizontal px-1">
-          <li><a href="" class="text-white">About</a></li>
-          <li><a href="" class="text-white">Gallery</a></li>
-          <li><a href="" class="text-white">Plant a Tree</a></li>
+          <li><a href="#about" class="text-white">About</a></li>
+          <li><a href="#gallery" class="text-white">Gallery</a></li>
+          <li><a href="#plant" class="text-white">Plant a Tree</a></li>
         </ul>
       </div>
       <div class="navbar-end">
-        <a class="btn bg-[#FACC15] text-[#15803D] hover:bg-[#f9d751] rounded-full shadow border-none">Plant a Tree</a>
+        <a class="btn bg-[#FACC15] text-[#15803D] hover:bg-[#07491f]  hover:text-[#FACC15] rounded-full shadow border-none">Plant a Tree</a>
       </div>
     </div>
   </nav>
@@ -66,7 +66,7 @@
         <p class="text-gray-600 mb-6 text-sm md:text-base">
           Join our mission to plant 1 million trees and make the Earth greener for future generations.
         </p>
-        <a href="#" class="btn bg-[#FACC15] text-[#15803D] rounded-full shadow px-6 text-[#15803D]">
+        <a href="#" class="btn bg-[#FACC15] text-[#15803D] rounded-full shadow px-6 text-[#15803D] hover:bg-[#15803D]  hover:text-[#FACC15] border-none ">
           Get Involved
         </a>
       </div>
@@ -80,7 +80,7 @@
   </section>
 
   <!-- hero -->
-  <section class="py-10 bg-green-50">
+  <section id="gallery" class="py-10 bg-green-50">
     <h2 class="text-3xl font-bold text-center mb-8 text-green-900">Choose Your Trees</h2>
 
     <div class="container mx-auto px-4 flex flex-col lg:flex-row gap-6">
@@ -120,7 +120,7 @@
 
 
   <!-- Campaign Section -->
-  <section class="max-w-5xl mx-auto p-6 ">
+  <section id="about" class="max-w-5xl mx-auto p-6 ">
 
     <!-- Title -->
     <h2 class="text-3xl font-bold text-center mb-8 text-green-900">About the Campaign</h2>
@@ -148,71 +148,78 @@
       </div>
     </div>
   </section>
-  <!--  IMPACT -->
-  <section id="impact" class="bg-[#CFF0DC] py-10">
-    <span class="text-3xl font-bold flex justify-center mb-8 text-green-900">Our Impact</span>
-    <div class="max-w-6xl mx-auto px-4 md:px-6 grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="bg-white rounded-2xl shadow p-6 text-center">
-        <div class="text-3xl font-extrabold text-green-900">500K+</div>
-        <div class="mt-2 text-gray-600">Trees Planted</div>
-      </div>
-      <div class="bg-white rounded-2xl shadow p-6 text-center">
-        <div class="text-3xl font-extrabold text-green-900">120+</div>
-        <div class="mt-2 text-gray-600">Communities Involved</div>
-      </div>
-      <div class="bg-white rounded-2xl shadow p-6 text-center">
-        <div class="text-3xl font-extrabold text-green-900">30+</div>
-        <div class="mt-2 text-gray-600">Countries Reached</div>
-      </div>
+  <!-- IMPACT -->
+<section id="impact" class="bg-[#CFF0DC] py-10">
+  <span class="text-3xl font-bold flex justify-center mb-8 text-green-900">Our Impact</span>
+  <div class="max-w-6xl mx-auto px-4 md:px-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+
+    <div class="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-2xl hover:scale-105 hover:bg-[#a3f4c3] transform transition duration-300">
+      <div class="text-3xl font-extrabold text-green-900">500K+</div>
+      <div class="mt-2 text-gray-600">Trees Planted</div>
     </div>
-  </section>
 
-  <!-- form -->
-
-
-  <section class="bg-[#166534] py-16">
-    <div class="max-w-2xl mx-auto px-6">
-
-      <!-- Title -->
-      <h2 class="text-3xl font-bold text-white text-center mb-8">
-        Plant a Tree Today
-      </h2>
-
-      <!-- Form Box -->
-      <div class="bg-[#15803D] shadow-lg rounded-2xl p-8">
-        <form class="space-y-5">
-
-          <!-- Name -->
-          <div>
-
-            <input type="text" placeholder="Enter your name" required
-              class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FACC15]">
-          </div>
-
-          <!-- Email -->
-          <div>
-
-            <input type="email" placeholder="Enter your email" required
-              class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FACC15]">
-          </div>
-
-          <!-- Number of Trees -->
-          <div>
-
-            <input type="number" placeholder="Enter number of trees" required
-              class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FACC15]">
-          </div>
-
-          <!-- Button -->
-          <button type="submit" 
-            class="w-full bg-[#FACC15] text-[#15803D] font-semibold py-3 rounded-full shadow-md hover:bg-[#b79612]  hover:text-[#1f9c4d]  transition">
-            Donate Now
-          </button>
-        </form>
-      </div>
-
+    <div class="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-2xl hover:scale-105 hover:bg-[#a3f4c3] transform transition duration-300">
+      <div class="text-3xl font-extrabold text-green-900">120+</div>
+      <div class="mt-2 text-gray-600">Communities Involved</div>
     </div>
-  </section>
+
+    <div class="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-2xl hover:scale-105 hover:bg-[#a3f4c3] transform transition duration-300">
+      <div class="text-3xl font-extrabold text-green-900">30+</div>
+      <div class="mt-2 text-gray-600">Countries Reached</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- form -->
+ 
+<section id="plant" class="bg-[#166534] py-16">
+  <div class="max-w-2xl mx-auto px-6">
+
+    
+    <h2 class="text-3xl font-bold text-white text-center mb-8">
+      Plant a Tree Today
+    </h2>
+
+    
+    <div class="bg-[#15803D] shadow-lg rounded-2xl p-8">
+      <form class="space-y-5">
+
+        
+        <div>
+          <input type="text" placeholder="Enter your name" required
+            class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FACC15]">
+        </div>
+
+        
+        <div>
+          <input type="email" placeholder="Enter your email" required
+            class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FACC15]">
+        </div>
+
+       
+        <div>
+          <select required
+            class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FACC15] bg-white text-gray-800">
+            <option value="">Number of Trees</option>
+            <option value="1">1 Tree - $5</option>
+            <option value="5">5 Trees - $25</option>
+            <option value="10">10 Trees - $50</option>
+          </select>
+        </div>
+ 
+  
+        <button type="submit" 
+          class="w-full bg-[#FACC15] text-[#15803D] font-semibold py-3 rounded-full shadow-md hover:bg-[#07491f] hover:text-[#FACC15] transition">
+          Donate Now
+        </button>
+
+      </form>
+    </div>
+
+  </div>
+</section>
+
 
   <!-- Footer Section -->
   <footer class="bg-[#14532D] py-6 ">
