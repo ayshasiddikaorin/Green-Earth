@@ -15,11 +15,7 @@
 ## 3) What are arrow functions in ES6?
 
 
-- Shorter syntax for functions.
-- this comes from parent scope.
-- Cannot be used as constructors.
-
-
+Arrow functions in ES6 provide a shorter and more concise syntax for writing functions without using the `function` keyword. They also inherit the `this` value from their surrounding context, which avoids common issues with the traditional `function` keyword. Arrow functions are ideal for callbacks and concise function expressions, but they cannot be used as constructors or with the `arguments` object.
 
 
 ## 4) How does destructuring assignment work in ES6?
@@ -28,7 +24,6 @@ In ES6, destructuring assignment allows you to extract values from arrays or obj
 
 
 
-## 5) 
+## 5) 5) Explain template literals in ES6. How are they different from string concatenation?
 
-
-
+Template literals in ES6 are string literals enclosed in backticks (`` ` ``) that allow embedding variables and expressions directly using `${...}`. They make it easier to create dynamic strings without using the `+` operator for concatenation. Unlike traditional string concatenation, template literals are cleaner, more readable, and support multiline strings, making code simpler and more maintainable.
