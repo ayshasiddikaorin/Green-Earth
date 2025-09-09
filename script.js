@@ -26,7 +26,7 @@ async function fetchData(id = "") {
       const card = document.createElement("div");
       card.className = "card";
       card.innerHTML = `
-  <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col hover:shadow-2xl transition duration-300">
+  <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col hover:shadow-2xl transition duration-300 cursor-pointer">
  
     <div class="h-48 w-full overflow-hidden flex items-center justify-center bg-gray-100">
       <img src="${item.image}" 
@@ -35,26 +35,30 @@ async function fetchData(id = "") {
     </div>
 
     <div class="p-4 flex flex-col flex-1 gap-2">
-      <h2 class="text-green-800 font-bold text-lg line-clamp-1">${item.name}</h2>
-      <p class="text-gray-600 text-sm line-clamp-2">${item.description}</p>
+<h2 class="text-green-800 hover:text-yellow-400 font-bold text-lg line-clamp-1 cursor-pointer plant-name">${item.name}</h2>
+           <p class="text-gray-600 text-sm line-clamp-2">${item.description}</p>
       
       <div class="flex items-center justify-between mt-2">
-        <span class="text-green-700 font-semibold">$${item.price}</span>
         <a href="#" 
-           class="bg-green-600 text-white px-3 py-1 rounded-lg shadow hover:bg-green-700 transition text-sm">
-           Buy Now
+           class="bg-green-300 text-white px-3 py-1 rounded-lg shadow hover:bg-green-700 transition text-sm">
+          ${item.category}
         </a>
+         <span class="text-green-700 font-semibold">$${item.price}</span>
       </div>
       
       <button 
-        class="mt-3 w-full bg-yellow-500 text-black font-semibold px-6 py-2 rounded-full shadow hover:bg-yellow-600 transition"
+        class="mt-3 w-full  bg-green-600 hover:bg-yellow-500 text-white hover:text-black font-semibold px-6 py-2 rounded-full shadow transition"
         onclick="addToCartFun(${item.id}, '${item.name}', ${item.price})">
         Add to Cart
       </button>
     </div>
   </div>
 `;
+      const plantName = card.querySelector(".plant-name");
 
+      plantName.addEventListener("click", () => {
+        openModal(item);
+      });
       container.appendChild(card);
     });
   } catch (error) {
@@ -119,8 +123,21 @@ async function fetchCategories() {
     categories.forEach((cat) => {
       const li = document.createElement("li");
       li.textContent = cat.category_name;
-      li.className = "hover:underline cursor-pointer";
-      li.onclick = () => fetchData(cat.id);
+      li.className = " cursor-pointer hover:bg-[#1D7F3F] hover:text-white rounded-lg p-2";
+      li.addEventListener("click", () => {
+        // Remove 'selected' from all other categories
+        listContainer.querySelectorAll("li").forEach((item) => {
+          item.classList.remove("bg-green-500", "text-white");
+          item.classList.add();
+        });
+
+        // Set clicked category as selected
+        li.classList.add("bg-green-500", "text-white", "rounded-lg");
+        li.classList.remove("hover:bg-blue-200");
+
+        // Fetch plants by category
+        fetchData(cat.id);
+      });
       listContainer.appendChild(li);
     });
   } catch (error) {
@@ -130,3 +147,32 @@ async function fetchCategories() {
 
 fetchData();
 fetchCategories();
+
+const modal = document.getElementById("modal");
+const modalContent = document.getElementById("modal-content");
+const modalClose = document.getElementById("modal-close");
+
+function openModal(item) {
+  modalContent.innerHTML = `
+    <img src="${item.image}" alt="${
+    item.name
+  }" class="w-full h-64 object-cover rounded-lg mb-4">
+    <h2 class="text-2xl font-bold text-green-800 mb-2">${item.name}</h2>
+    <p class="text-gray-700 mb-2">${
+      item.description || "No description available."
+    }</p>
+    <p class="text-green-700 font-semibold text-lg">$${item.price || 0}</p>
+  `;
+  modal.classList.remove("hidden");
+}
+
+modalClose.addEventListener("click", () => {
+  modal.classList.add("hidden");
+});
+
+// Close modal if click outside content
+modal.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    modal.classList.add("hidden");
+  }
+});
