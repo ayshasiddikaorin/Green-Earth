@@ -9,21 +9,19 @@ const API = {
 
 async function fetchData(id = "") {
   try {
-    if (id.trim() > 0) {
-      const response = await fetch(
-        `https://openapi.programming-hero.com/api/category/${categoryId}`
+    let response = "";
+    if (id > 0) {
+      response = await fetch(
+        `https://openapi.programming-hero.com/api/category/${id}`
       );
     } else {
-      const response = await fetch(
-        "https://openapi.programming-hero.com/api/plants"
-      );
+      response = await fetch("https://openapi.programming-hero.com/api/plants");
     }
 
     const jsonData = await response.json();
     const data = jsonData.plants;
-
     const container = document.getElementById("card-container");
-
+    container.innerHTML = "";
     data.slice(0, 10).forEach((item) => {
       const card = document.createElement("div");
       card.className = "card";
@@ -64,10 +62,7 @@ async function fetchData(id = "") {
   }
 }
 
-fetchData();
-
 function addToCartFun(id, name, price) {
-  alert("rrr");
   let existingProduct = cart.find((item) => item.id === id);
 
   if (existingProduct) {
@@ -122,7 +117,6 @@ async function fetchCategories() {
     listContainer.innerHTML = "";
 
     categories.forEach((cat) => {
-      console.log(cat);
       const li = document.createElement("li");
       li.textContent = cat.category_name;
       li.className = "hover:underline cursor-pointer";
@@ -134,16 +128,5 @@ async function fetchCategories() {
   }
 }
 
-async function fetchCategoryItems(categoryId) {
-  try {
-    const response = await fetch(
-      `https://openapi.programming-hero.com/api/category/${categoryId}`
-    );
-    const data = await response.json();
-    console.log("Category Data:", data);
-  } catch (error) {
-    console.error("Error fetching category items:", error);
-  }
-}
-
+fetchData();
 fetchCategories();
